@@ -11,23 +11,23 @@ In 24 hours, we created the hardware kit, 3d instructions, web app to click to c
 - contains a QR code link to 3D assembly instructions
 - priced at \$50, yet could reduce in bulk
 - hardware: Adafruit Feather, neopixel light strands, button, accelerometer, force sensor, sound sensor, UV sensor, air quality sensor
-- code link:
+- asset link: https://github.com/itisaasta/lumin8it/tree/master/lumin8it-kit
 
 ## Web App
 
 - enables children to click to configure their hardware and see the code as a result
 - contains 3D hardware setup instructions to ease their hardware experience
 - technology: React, React Bootstrap, Fyuse; hosted on AWS S3 fronted by CloudFront for performance and scalability
-- code link:
+- code link: https://github.com/itisaasta/lumin8it/tree/master/lumin8it-web
 
 ## API
 
 - stores and retrieves programs created through the web app
 - technology: AWS API Gateway, Node.js hosted on AWS Lambda, AWS DynamoDB
-- code link:
+- code link: https://github.com/itisaasta/lumin8it/tree/master/lumin8it-api
 
 ## Hardware
 
 - connects to wifi, calls API, interprets the programs and runs their functionality
 - technology: Arduino (C++)
-- code link:
+- code link: https://github.com/itisaasta/lumin8it/tree/master/lumin8it-hardware
