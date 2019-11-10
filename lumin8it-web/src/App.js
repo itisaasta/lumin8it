@@ -6,6 +6,9 @@ import Button from "react-bootstrap/Button";
 import FormControl from "react-bootstrap/FormControl";
 import { Context as AuthContext } from "./context/AuthContext";
 import { Link } from "react-router-dom";
+import Image from "react-bootstrap/Image"
+import Container from "react-bootstrap/Container"
+import Row from "react-bootstrap/Row"
 import "./App.css";
 
 function App() {
@@ -14,6 +17,7 @@ function App() {
   const [username, setUsername] = useState(state.username);
 
   return (
+    
     <Navbar bg="light" expand="lg">
       <Navbar.Brand href="/">Lumin8it</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -54,7 +58,10 @@ function App() {
         </Form>
       </Navbar.Collapse>
     </Navbar>
-  );
+  
+  )
+    
 }
+  
 
 export default App;

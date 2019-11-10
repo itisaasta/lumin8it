@@ -9,6 +9,7 @@ import AddProgram from "./screens/AddProgram";
 import DisplayProgram from "./screens/DisplayProgram";
 import EditProgram from "./screens/EditProgram";
 import ListPrograms from "./screens/ListPrograms";
+import Instructions from "./screens/howto";
 
 import { Provider as AuthProvider } from "./context/AuthContext";
 import { Provider as ProgramProvider } from "./context/ProgramContext";
@@ -23,6 +24,8 @@ ReactDOM.render(
           <Route render={() => <AddProgram />} path="/create" />
           <Route render={() => <EditProgram />} path="/edit/:id" />
           <Route render={() => <DisplayProgram />} path="/show/:id" />
+          <Route render={() => <Instructions />} path="/howto" />
+          
         </div>
       </Router>
     </ProgramProvider>
