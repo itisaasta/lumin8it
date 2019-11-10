@@ -14,6 +14,7 @@ const createProgram = dispatch => async (
   lightCount,
   active,
   userId,
+  programName,
   callback
 ) => {
   console.log("POSTITEM");
@@ -28,7 +29,8 @@ const createProgram = dispatch => async (
     lightBehavior,
     lightCount,
     active,
-    userId
+    userId,
+    programName
   });
   if (callback) {
     callback();
