@@ -15,7 +15,7 @@ function App() {
 
   return (
     <Navbar bg="light" expand="lg">
-      <Navbar.Brand href="/">React-Hooks</Navbar.Brand>
+      <Navbar.Brand href="/">Lumin8it</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">

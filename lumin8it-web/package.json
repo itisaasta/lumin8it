@@ -18,6 +18,7 @@
   "devDependencies": {
     "@babel/core": "^7.6.4",
     "@babel/preset-env": "^7.6.3",
+    "@types/react-bootstrap": "^0.32.20",
     "babel-core": "^6.26.0",
     "babel-loader": "^8.0.6",
     "babel-preset-env": "^1.6.1",
