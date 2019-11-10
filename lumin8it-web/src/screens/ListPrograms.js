@@ -10,6 +10,7 @@ function ListPrograms(props) {
   const [getPrograms, programResults] = usePrograms();
   console.log(programResults);
 
+  /*
   const [data, setData] = useState([]);
   const [showLoading, setShowLoading] = useState(true);
   const apiUrl = "http://localhost:3000/api/v1/products";
@@ -22,7 +23,7 @@ function ListPrograms(props) {
     };
 
     fetchData();
-  }, []);
+  }, []);*/
 
   const showDetail = id => {
     props.history.push({
@@ -32,21 +33,16 @@ function ListPrograms(props) {
 
   return (
     <div>
-      {showLoading && (
-        <Spinner animation="border" role="status">
-          <span className="sr-only">Loading...</span>
-        </Spinner>
-      )}
       <ListGroup>
-        {data.map((item, idx) => (
+        {programResults.map((item, idx) => (
           <ListGroup.Item
             key={idx}
             action
             onClick={() => {
-              showDetail(item._id);
+              showDetail(item.programid);
             }}
           >
-            {item.prod_name}
+            {item.measurementType}
           </ListGroup.Item>
         ))}
       </ListGroup>

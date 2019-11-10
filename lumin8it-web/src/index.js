@@ -11,18 +11,21 @@ import EditProgram from "./screens/EditProgram";
 import ListPrograms from "./screens/ListPrograms";
 
 import { Provider as AuthProvider } from "./context/AuthContext";
+import { Provider as ProgramProvider } from "./context/ProgramContext";
 
 ReactDOM.render(
   <AuthProvider>
-    <Router>
-      <div>
-        <Route render={() => <App />} path="/" />
-        <Route render={() => <ListPrograms />} path="/list" />
-        <Route render={() => <AddProgram />} path="/create" />
-        <Route render={() => <EditProgram />} path="/edit/:id" />
-        <Route render={() => <DisplayProgram />} path="/show/:id" />
-      </div>
-    </Router>
+    <ProgramProvider>
+      <Router>
+        <div>
+          <Route render={() => <App />} path="/" />
+          <Route render={() => <ListPrograms />} path="/list" />
+          <Route render={() => <AddProgram />} path="/create" />
+          <Route render={() => <EditProgram />} path="/edit/:id" />
+          <Route render={() => <DisplayProgram />} path="/show/:id" />
+        </div>
+      </Router>
+    </ProgramProvider>
   </AuthProvider>,
   document.getElementById("root")
 );

@@ -1,68 +1,33 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# lumin8it
 
-## Available Scripts
+Light up your world with lumin8it. Hardware doesn't need to be hard. We wanted to create a way for kids to click to code their hardware to help promote a positive first time hardware experience. We chose to create a kit to make light up shoes because they're a daily wear item that sparks joy when they glow. A light up shoe build also translates well to adults because of the reminder of childhood joy. We added a button to run through multiple programs and a variety of sensors so the shoes could react to the world around them. Our instructions are 3D so kids can see all angles of assembling the hardware. We have high interest in bringing our product to market and think it could be sold for \$50 per kit.
 
-In the project directory, you can run:
+In 24 hours, we created the hardware kit, 3d instructions, web app to click to code the hardware, api to store the programs created from the web app, program interpreter code running on the hardware, and a commercial.
 
-### `yarn start`
+## Kit
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- includes all hardware components to make one pair of sneakers
+- components are pre-soldered so all they require is assembling
+- contains a QR code link to 3D assembly instructions
+- priced at \$50, yet could reduce in bulk
+- hardware: Adafruit Feather, neopixel light strands, button, accelerometer, force sensor, sound sensor, UV sensor, air quality sensor
+- code link:
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Web App
 
-### `yarn test`
+- enables children to click to configure their hardware and see the code as a result
+- contains 3D hardware setup instructions to ease their hardware experience
+- technology: React, React Bootstrap, Fyuse; hosted on AWS S3 fronted by CloudFront for performance and scalability
+- code link:
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## API
 
-### `yarn build`
+- stores and retrieves programs created through the web app
+- technology: AWS API Gateway, Node.js hosted on AWS Lambda, AWS DynamoDB
+- code link:
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Hardware
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- connects to wifi, calls API, interprets the programs and runs their functionality
+- technology: Arduino (C++)
+- code link:
