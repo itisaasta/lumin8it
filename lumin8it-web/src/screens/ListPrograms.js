@@ -42,7 +42,9 @@ function ListPrograms(props) {
               showDetail(item.programid);
             }}
           >
-            {item.measurementType}
+            {item.programName}
+            
+            
           </ListGroup.Item>
         ))}
       </ListGroup>

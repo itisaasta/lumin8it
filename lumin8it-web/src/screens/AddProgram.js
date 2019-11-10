@@ -39,6 +39,7 @@ function AddProgram(props) {
       lightsnumber,
       toggleactive,
       state.username,
+      programName,
       props.history.push("/list") ///" + result.data._id
     );
 
