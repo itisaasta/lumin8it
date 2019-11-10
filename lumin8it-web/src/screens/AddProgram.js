@@ -128,35 +128,35 @@ function AddProgram(props) {
             <ButtonToolbar>
               <Button
                 onClick={() => setLightbehavior("scroll")}
-                variant="outline-*"
+                variant={lightbehavior == "scroll" ? "info" : "light"}
               >
                 {" "}
                 <i class="fas fa-lightbulb"></i>{" "}
               </Button>
               <Button
                 onClick={() => setLightbehavior("blink")}
-                variant="outline-*"
+                variant={lightbehavior == "blink" ? "info" : "light"}
               >
                 {" "}
                 <i class="fas fa-star"></i>{" "}
               </Button>
               <Button
                 onClick={() => setLightbehavior("wipe")}
-                variant="outline-*"
+                variant={lightbehavior == "wipe" ? "info" : "light"}
               >
                 {" "}
                 <i class="fas fa-arrow-alt-circle-right"></i>{" "}
               </Button>
               <Button
                 onClick={() => setLightbehavior("solid")}
-                variant="outline-*"
+                variant={lightbehavior == "solid" ? "info" : "light"}
               >
                 {" "}
                 <i class="fas fa-square"></i>{" "}
               </Button>
               <Button
                 onClick={() => setLightbehavior("rainbow")}
-                variant="outline-*"
+                variant={lightbehavior == "rainbow" ? "info" : "light"}
               >
                 {" "}
                 <i class="fas fa-rainbow"></i>{" "}
@@ -167,6 +167,7 @@ function AddProgram(props) {
             <ButtonToolbar>
               <Button
                 variant="outline-*"
+                style={{ backgroundColor: color1 }}
                 onClick={() => {
                   setButtonactive1(!buttonactive1);
                   setButtonactive2(false);
@@ -178,6 +179,7 @@ function AddProgram(props) {
               </Button>
               <Button
                 variant="outline-*"
+                style={{ backgroundColor: color2 }}
                 onClick={() => {
                   setButtonactive2(!buttonactive2);
                   setButtonactive1(false);
@@ -189,6 +191,7 @@ function AddProgram(props) {
               </Button>
               <Button
                 variant="outline-*"
+                style={{ backgroundColor: color3 }}
                 onClick={() => {
                   setButtonactive3(!buttonactive3);
                   setButtonactive1(false);
@@ -258,7 +261,7 @@ function AddProgram(props) {
           </Form.Group>
 
           <Button variant="primary" type="submit">
-            Enter
+            Save
           </Button>
         </Form>
       </Jumbotron>
