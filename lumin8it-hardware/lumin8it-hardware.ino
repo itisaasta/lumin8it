@@ -1,10 +1,11 @@
+  
 #include <SPI.h>
 #include <WiFi101.h>
 #include <Arduino_JSON.h>
 #include <Adafruit_NeoPixel.h>
 #include "arduino_secrets.h" 
 
-#define NUM_LEDS 90 //39 for Sarah's shoes //90 for Aasta's red
+#define NUM_LEDS 39 //39 for Sarah's shoes //90 for Aasta's red
 #define PIN 10
 #define MIC_PIN 9 // microphone
 #define FORCE_PIN 1
@@ -37,7 +38,7 @@ int keyIndex = 0;            // your network key Index number (needed only for W
 
 bool offlineMode = true;
 
-char programDefault[] = "{\"example\":[{\"measurementType\":\"pressure\", \"lightBehavior\":\"meteor\"}, {}],\"timestamp\":42}";
+char programDefault[] = "{\"example\":[{\"measurementType\":\"none\", \"lightBehavior\":\"meteor\"}, {}],\"timestamp\":42}";
 JSONVar programs = JSON.parse(programDefault);
 
 int status = WL_IDLE_STATUS;
@@ -84,9 +85,9 @@ void setup() {
   WiFi.setPins(8,7,4,2);
   //Initialize serial and wait for port to open:
   Serial.begin(9600);
-  while (!Serial) {
-    ; // wait for serial port to connect. Needed for native USB port only
-  }
+  //while (!Serial) {
+  //  ; // wait for serial port to connect. Needed for native USB port only
+  //}
 
   // check for the presence of the shield:
   if (WiFi.status() == WL_NO_SHIELD) {
@@ -195,6 +196,9 @@ void loop() {
     lightUp(JSON.stringify(programs["example"][currentProgram]["lightBehavior"]));
     }
     }
+  else if(JSON.stringify(programs["example"][currentProgram]["measurementType"]) == "\"none\""){
+    lightUp(JSON.stringify(programs["example"][currentProgram]["lightBehavior"]));
+  }
 }
 
 void lightUp(String lightBehavior){
